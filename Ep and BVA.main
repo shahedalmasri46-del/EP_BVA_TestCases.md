@@ -63,7 +63,3 @@
 
 ---
 
-##Notes
-- **EP** reduces test cases by grouping inputs into valid/invalid partitions.  
-- **BVA** focuses on boundary values (edges of ranges).  
-- Combining EP + BVA ensures stronger test coverage.  
