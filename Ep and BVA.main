@@ -1,0 +1,69 @@
+# QA Techniques – Equivalence Partitioning (EP) & Boundary Value Analysis (BVA)
+
+## 1. Age Example (18–33)
+
+### Equivalence Partitioning (EP)
+
+| Test Case ID | Input Condition | Partition | Test Data | Expected Result |
+|--------------|----------------|-----------|-----------|-----------------|
+| TC01 | Age 18–33 | Valid | 25 | Accepted |
+| TC02 | Age 18–33 | Invalid (<18) | 15 | Rejected |
+| TC03 | Age 18–33 | Invalid (>33) | 40 | Rejected |
+
+### Boundary Value Analysis (BVA)
+
+| Test Case ID | Input Condition | Partition | Test Data | Expected Result |
+|--------------|----------------|-----------|-----------|-----------------|
+| TC04 | Age 18–33 | Boundary Valid | 18 | Accepted |
+| TC05 | Age 18–33 | Boundary Valid | 33 | Accepted |
+| TC06 | Age 18–33 | Boundary Invalid | 17 | Rejected |
+| TC07 | Age 18–33 | Boundary Invalid | 34 | Rejected |
+
+---
+
+## 2. Percentage Example (50–90%)
+
+### Equivalence Partitioning (EP)
+
+| Test Case ID | Input Condition | Partition | Test Data | Expected Result |
+|--------------|----------------|-----------|-----------|-----------------|
+| TC08 | Percentage 50–90 | Valid | 70% | Accepted |
+| TC09 | Percentage 50–90 | Invalid (<50) | 45% | Error Page |
+| TC10 | Percentage 50–90 | Invalid (>90) | 95% | Error Page |
+
+### Boundary Value Analysis (BVA)
+
+| Test Case ID | Input Condition | Partition | Test Data | Expected Result |
+|--------------|----------------|-----------|-----------|-----------------|
+| TC11 | Percentage 50–90 | Boundary Valid | 50% | Accepted |
+| TC12 | Percentage 50–90 | Boundary Valid | 90% | Accepted |
+| TC13 | Percentage 50–90 | Boundary Invalid | 49% | Error Page |
+| TC14 | Percentage 50–90 | Boundary Invalid | 91% | Error Page |
+
+---
+
+## 3. Salary Example (1000–5000)
+
+### Equivalence Partitioning (EP)
+
+| Test Case ID | Input Condition | Partition | Test Data | Expected Result |
+|--------------|----------------|-----------|-----------|-----------------|
+| TC15 | Salary 1000–5000 | Valid | 3000 | Accepted |
+| TC16 | Salary 1000–5000 | Invalid (<1000) | 800 | Rejected |
+| TC17 | Salary 1000–5000 | Invalid (>5000) | 6000 | Rejected |
+
+### Boundary Value Analysis (BVA)
+
+| Test Case ID | Input Condition | Partition | Test Data | Expected Result |
+|--------------|----------------|-----------|-----------|-----------------|
+| TC18 | Salary 1000–5000 | Boundary Valid | 1000 | Accepted |
+| TC19 | Salary 1000–5000 | Boundary Valid | 5000 | Accepted |
+| TC20 | Salary 1000–5000 | Boundary Invalid | 999 | Rejected |
+| TC21 | Salary 1000–5000 | Boundary Invalid | 5001 | Rejected |
+
+---
+
+## 📌 Notes
+- **EP** reduces test cases by grouping inputs into valid/invalid partitions.  
+- **BVA** focuses on boundary values (edges of ranges).  
+- Combining EP + BVA ensures stronger test coverage.  
