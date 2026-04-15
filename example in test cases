@@ -1,0 +1,73 @@
+TC01 – Positive Test Case
+Title: Validate user registration with valid data
+
+Pre-condition: User is on the registration page
+
+Steps:
+
+Enter valid username
+
+Enter valid email address
+
+Enter valid password
+
+Click "Register"
+
+Expected Result: Account created successfully, user redirected to homepage
+
+Actual Result: Account created and redirected correctly
+
+Status: Pass
+
+TC02 – Positive Test Case
+Title: Validate entering a valid promotion code
+
+Pre-condition: User signed up and reached promotion code entry page
+
+Steps:
+
+Enter valid code (PROMO10)
+
+Click "Apply"
+
+Expected Result: System accepts code and applies 10% discount
+
+Actual Result: Discount applied successfully
+
+Status: Pass
+
+TC03 – Negative Test Case
+Title: Validate entering an invalid promotion code
+
+Pre-condition: User signed up and wants to enter promotion code
+
+Steps:
+
+Enter invalid code (hh+78)
+
+Click "Apply"
+
+Expected Result: System rejects code and displays error message "Enter valid code"
+
+Actual Result: Error message displayed correctly
+
+Status: Pass
+
+TC04 – Negative Test Case
+Title: Guest user attempts to post an ad
+
+Pre-condition: User is not logged in (guest mode)
+
+Steps:
+
+Open website as guest
+
+Click "Post Ad"
+
+Enter ad details and try to publish
+
+Expected Result: System prevents action and requests login
+
+Actual Result: Alert displayed "Please log in first"
+
+Status: Pass
